@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Syne Mono', monospace;
+  margin: 50px 0;
+}
+
+form {
+  background-color: red;
+  width: 1000px;
+  text-align: center;
+  margin: auto;
+}
+
+.icons {
+  text-align: center;
+  width: 100px;
+  height: 600px;
+
+  overflow-y: scroll;
+  /* Переместить блок влево. Другой блок встает справа */
+  float: left;
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.icons::-webkit-scrollbar {
+  display: none;
+}
+
+
+.icons img {
+  width: 100%;
+  /* Чтобы убрать отсутпы между инлайн блоками */
+  display: block;
+}
+
+.sliderContainer {
+  /* Нужно чтобы абсолютные теги выравнивались относительно этого родителя */
+  position: relative;
+
+  width: calc(100% - 100px);
+  float: right;
+  height: 600px;
+  overflow: hidden;
+
+}
+
+.slider {
+  height: 100%;
+  white-space: nowrap;
+  transform: translateX(-100%);
+  background-color: red;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  object-fit: cover;
+}
+
+.sliderButtons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sliderButtons a {
+  position: absolute;
+  width: 50%;
+  height: 600px;
+  top: 0;
+  
+}
+
+.leftSlider {
+  left: 0;
+}
+
+.rightSlider {
+  right: 0;
+}
+
+.right {
+  transform: translateX(-200%);
+  transition: 0.3s;
+}
+
+.left {
+  transform: translateX(0%);
+  transition: 0.3s;
+}
